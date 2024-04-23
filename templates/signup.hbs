@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUpPage</title>
+    <style>
+        body{
+            background-color: powderblue;
+        }
+        #card-signup{
+            background-color: lightblue;
+            border: 5px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 100px auto;
+            padding: 30px;
+            width: 400px;
+            height: 600px;
+            border-radius: 10px;
+            overflow-y: scroll;
+        }
+        #signup-button {
+            border: none;
+            color: #fff;
+            height: 40px;
+            width: 100%;
+            background-color: deepskyblue;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .signup-details {
+            border: 1px solid #ddd;
+            height: 40px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form id="card-signup" method="post" action="/save">
+        <h1>SIGN UP HERE</h1>
+        <label>Username:</label>
+        <input class="signup-details" type="text" name="username" placeholder="USERNAME">
+        <br>
+        <br>
+        <label>Password:</label>
+        <input class="signup-details" type="password" name="password" placeholder="PASSWORD">
+        <br>
+        <br>
+        <label>Timestamp:</label>
+        <input class="signup-details" type="datetime-local" name="timestamp">
+        <br>
+        <br>
+        <label>Roll No:</label>
+        <input class="signup-details" type="text" name="rollno" placeholder="ROLL NO">
+        <br>
+        <br>
+        <label>Branch:</label>
+        <input class="signup-details" type="text" name="branch" placeholder="BRANCH">
+        <br>
+        <br>
+        <label>Section:</label>
+        <input class="signup-details" type="text" name="section" placeholder="SECTION">
+        <br>
+        <br>
+        <label>Profile Photo:</label>
+        <input class="signup-details" type="file" name="profilephoto">
+        <br>
+        <br>
+        <label>Email:</label>
+        <input class="signup-details" type="email" name="email" placeholder="EMAIL">
+        <br>
+        <br>
+        <label>Phone No:</label>
+        <input class="signup-details" type="tel" name="phoneno" placeholder="PHONE NO">
+        <br>
+        <br>
+        <label>Local Address:</label>
+        <input class="signup-details" name="localaddress" placeholder="LOCAL ADDRESS">
+        <br>
+        <br>
+        <label>Father's Name:</label>
+        <input class="signup-details" type="text" name="fathername" placeholder="FATHER'S NAME">
+        <br>
+        <br>
+        <label>Mother's Name:</label>
+        <input class="signup-details" type="text" name="mothername" placeholder="MOTHER'S NAME">
+        <br>
+        <br>
+        <label>Father's Occupation:</label>
+        <input class="signup-details" type="text" name="fatheroccupation" placeholder="FATHER'S OCCUPATION">
+        <br>
+        <br>
+        <label>Mother's Occupation:</label>
+        <input class="signup-details" type="text" name="motheroccupation" placeholder="MOTHER'S OCCUPATION">
+        <br>
+        <br>
+        <label>Father's Phone No:</label>
+        <input class="signup-details" type="tel" name="fatherphoneno" placeholder="FATHER'S PHONE NO">
+        <br>
+        <br>
+        <label>Father's Mail ID:</label>
+        <input class="signup-details" type="email" name="fathermailid" placeholder="FATHER'S MAIL ID">
+        <br>
+        <br>
+        <label>Mother's Phone No:</label>
+        <input class="signup-details" type="tel" name="motherphoneno" placeholder="MOTHER'S PHONE NO">
+        <br>
+        <br>
+        <label>Mother's Mail ID:</label>
+        <input class="signup-details" type="email" name="mothermailid" placeholder="MOTHER'S MAIL ID">
+        <br>
+        <br>
+        <label>Class X Percentage:</label>
+        <input class="signup-details" type="number" name="classxpercentage" placeholder="CLASS X PERCENTAGE">
+        <br>
+        <br>
+        <label>Class XII Percentage:</label>
+        <input class="signup-details" type="number" name="classxiipercentage" placeholder="CLASS XII PERCENTAGE">
+        <br>
+        <br>
+        <label>MENTORING DETAILS:</label>
+        <input class="signup-details" name="mentoringdetails" placeholder="MENTORING DETAILS">
+        <br>
+        <br>
+        <input type="radio" class="signup-check" name="tick"> I, hereby, declare that the information furnished above is true, complete and correct to the best of my knowledge and belief.
+        <button type="submit" id="signup-button" value="submit">SIGN UP</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+    <style>
+        body{
+            background-color: powderblue;
+        }
+        #card-login{
+            background-color: lightblue;
+            border: 5px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; padding: 30px; width: 400px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        #login-button {
+            border: none;
+            color: #fff;
+            height: 40px;
+            width: 100%;
+            background-color: deepskyblue;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .login-details {
+            border: 1px solid #ddd;
+            height: 40px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px; }
+        input[type="text"],
+        input[type="password"]
+        {
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <form id="card-login" method="post" action="/auth">
+        <h1>LOGIN HERE</h1>
+        <input class="login-details" type="text" name="username" placeholder="USERNAME">
+        <br>
+        <br>
+        <input class="login-details" type="password" name="password" placeholder="PASSWORD">
+        <br>
+        <br>
+        <button type="submit" id="login-button" value="submit">LOGIN</button>
+        <a href="/signup">NO ACCOUNT? MAKE A NEW ONE</a>
+    </form>
+</center>
+
+</body>
+</html>
