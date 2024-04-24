@@ -1,0 +1,117 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to top, white, powderblue);
+    }
+
+    table {
+        width: 200%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    input[type="text"], input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    input[type="submit"]:active {
+        background-color: #3e8e41;
+    }
+</style>
+<b><h1><center>ADMIN TABLE</center></h1></b>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Roll No</th>
+        <th>Branch</th>
+        <th>Section</th>
+        <th>Profile Photo</th>
+        <th>Email</th>
+        <th>Phone No</th>
+        <th>Local Address</th>
+        <th>Father's Name</th>
+        <th>Mother's Name</th>
+        <th>Father's Occupation</th>
+        <th>Mother's Occupation</th>
+        <th>Father's Phone No</th>
+        <th>Father's Mail ID</th>
+        <th>Mother's Phone No</th>
+        <th>Mother's Mail ID</th>
+        <th>Class X Percentage</th>
+        <th>Class XII Percentage</th>
+        <th>Action</th>
+    </tr>
+
+    {{#each data}}
+        <tr>
+            <form action="/update" method="post">
+            <td><input name="username" type="text" value="{{this.username}}"></td>
+            <td><input name="password" type="text" value="{{this.password}}"></td>
+            <td><input name="rollno" type="text" value="{{this.rollno}}"></td>
+            <td><input name="branch" type="text" value="{{this.branch}}"></td>
+            <td><input name="section" type="text" value="{{this.section}}"></td>
+            <td><input name="profilephoto" type="text" value="{{this.profilephoto}}"></td>
+            <td><input name="email" type="text" value="{{this.email}}"></td>
+            <td><input name="phoneno" type="text" value="{{this.phoneno}}"></td>
+            <td><input name="localaddress" type="text" value="{{this.localaddress}}"></td>
+            <td><input name="fathername" type="text" value="{{this.fathername}}"></td>
+            <td><input name="mothername" type="text" value="{{this.mothername}}"></td>
+            <td><input name="fatheroccupation" type="text" value="{{this.fatheroccupation}}"></td>
+            <td><input name="motheroccupation" type="text" value="{{this.motheroccupation}}"></td>
+            <td><input name="fatherphoneno" type="text" value="{{this.fatherphoneno}}"></td>
+            <td><input name="fathermailid" type="text" value="{{this.fathermailid}}"></td>
+            <td><input name="motherphoneno" type="text" value="{{this.motherphoneno}}"></td>
+            <td><input name="mothermailid" type="text" value="{{this.mothermailid}}"></td>
+            <td><input name="classxpercentage" type="text" value="{{this.classxpercentage}}"></td>
+            <td><input name="classxiipercentage" type="text" value="{{this.classxiipercentage}}"></td>
+            <td>
+                    <input name="id" hidden type="text" value="{{this._id}}">
+                    <input type="submit" value="Update">
+            </td>
+            </form>
+            <td>
+            <form action="/delete" method="post">
+                <td>
+                    <input name="id" hidden type="text" value="{{this._id}}">
+                    <input type="submit" value="Delete">
+                </td>
+            </form>
+            </td>
+        </tr>
+    {{/each}}
+</table>
